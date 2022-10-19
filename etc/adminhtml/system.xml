@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @package   F8_StoreConfig
+ * @author    Maneza F8
+ * @copyright Copyright (c) 2022 F8
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+            <tab  id="f8storeconfig" translate="label" sortOrder="100">
+                <label>F8 Configs</label>
+            </tab>
+        <section id="get_store_section" translate="label" type="text" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>The Stores</label>
+            <tab>f8storeconfig</tab>
+            <resource>F8_StoreConfig::config_f8storeconfig</resource>
+                <group id="get_store_groups" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Stores</label>
+                    <field id="get_store_field" translate="label" type="multiselect" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Stores</label>
+                        <source_model>F8\StoreConfig\Model\Adminhtml\System\Config\Source\Store\Collection</source_model>
+                        <comment>select stores or a store for config.</comment>
+                    </field>
+                </group>
+        </section>
+    </system>
+</config>
